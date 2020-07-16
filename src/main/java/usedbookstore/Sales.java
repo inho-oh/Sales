@@ -22,6 +22,7 @@ public class Sales {
 
     @PostPersist
     public void onPostPersist(){
+
         Sold sold = new Sold();
         BeanUtils.copyProperties(this, sold);
         sold.publishAfterCommit();
